@@ -1,0 +1,51 @@
+
+.card-image img {
+    height: 200px;
+    object-fit: contain; 
+    padding: 10px;
+    background-color: #fff;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    margin-top: 3rem;
+} 
+
+/* ---  ANIMACIÓN HERO  --- */
+.anim-bg {
+    background: linear-gradient(-45deg, #B570F6, #003CFF, #E14581);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- BOTÓN CRISTAL --- */
+.glass-button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 50px !important;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05); /* Mantiene tu estilo original de crecimiento */
+} 
+
