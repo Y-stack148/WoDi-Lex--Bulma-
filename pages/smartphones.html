@@ -6,11 +6,9 @@
     <title>Smartphones | WoDi Lex</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Apuntamos correctamente al CSS que está en la raíz -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- ENCABEZADO Y NAVEGACIÓN UNIFICADA -->
     <header>
         <nav class="navbar is-dark is-fixed-top" aria-label="main navigation">
             <div class="container">
@@ -32,26 +30,23 @@
                         <a class="navbar-item is-active" href="smartphones.html">Smartphones</a>
                         <a class="navbar-item" href="laptops.html">Laptops</a>
                         <a class="navbar-item" href="gadgets.html">Gadgets</a>
-                        <!-- EFECTO 1: Indicador para la cápsula deslizante (Glow Pill) -->
                         <span class="nav-sliding-indicator"></span>
                     </div>
 
                     <div class="navbar-end">
-                        <!-- Buscador -->
                         <div class="navbar-item">
-                            <div class="field has-addons">
+                            <div class="field has-addons custom-search-field">
                                 <div class="control">
-                                    <input class="input is-small is-rounded" type="text" placeholder="Buscar...">
+                                    <input class="input is-small is-rounded custom-search-input" type="text" placeholder="Buscar...">
                                 </div>
                                 <div class="control">
-                                    <button class="button is-small is-link is-rounded">
+                                    <button class="button is-small is-link is-rounded custom-search-btn">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Acceso al Login -->
                         <div class="navbar-item">
                             <a href="login.html" class="button is-dark is-outlined is-inverted is-rounded">
                                 <span class="icon"><i class="fas fa-user"></i></span>
@@ -59,7 +54,6 @@
                             </a>
                         </div>
 
-                        <!-- Botón del Carrito -->
                         <div class="navbar-item">
                             <a href="carrito.html" class="button is-link is-inverted is-outlined is-rounded">
                                 <span class="icon">
@@ -74,17 +68,15 @@
         </nav>
     </header>
 
-    <!-- CONTENIDO DE PRODUCTOS -->
     <main class="section" style="margin-top: 3rem;">
         <div class="container">
             <h1 class="title is-2 has-text-centered mb-6">Nuestros Smartphones</h1>
             <div class="columns is-multiline">
                 
-                <!-- PRODUCTO 1: SAMSUNG -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
                     <div class="card product-3d-card">
                         <div class="wrapper">
-                            <img src="../assets/samsung.jpg" alt="Samsung S26 Ultra" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=600" alt="Samsung S26 Ultra" class="product-img">
                         </div>
                         <div class="card-content has-text-centered product-info">
                             <p class="title is-5">Samsung S26 Ultra</p>
@@ -94,11 +86,10 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 2: IPHONE -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
                     <div class="card product-3d-card">
                         <div class="wrapper">
-                            <img src="../assets/iphone.jpg" alt="Iphone 17 Pro Max" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=600" alt="Iphone 17 Pro Max" class="product-img">
                         </div>
                         <div class="card-content has-text-centered product-info">
                             <p class="title is-5">Iphone 17 Pro Max</p>
@@ -108,11 +99,10 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 3: PIXEL -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
                     <div class="card product-3d-card">
                         <div class="wrapper">
-                            <img src="../assets/pixel.jpg" alt="Google Pixel 10 Pro XL" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=600" alt="Google Pixel 10 Pro XL" class="product-img">
                         </div>
                         <div class="card-content has-text-centered product-info">
                             <p class="title is-5">Google Pixel 10 Pro XL</p>
@@ -122,11 +112,10 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 4: ONEPLUS -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
                     <div class="card product-3d-card">
                         <div class="wrapper">
-                            <img src="../assets/oneplus.jpg" alt="OnePlus 14 Pro" class="product-img">
+                            <img src="https://images.unsplash.com/photo-1565849328264-c53f4101d932?q=80&w=600" alt="OnePlus 14 Pro" class="product-img">
                         </div>
                         <div class="card-content has-text-centered product-info">
                             <p class="title is-5">OnePlus 14 Pro</p>
@@ -140,14 +129,12 @@
         </div>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer class="footer has-background-black has-text-grey-light mt-6">
         <div class="container content has-text-centered">
             <p>&copy; 2026 <strong>WoDi Lex</strong>. Todos los derechos reservados. Calidad e innovación garantizada.</p>
         </div>
     </footer>
 
-    <!-- LLAMADA AL SCRIPT: Vinculado saliendo de la carpeta pages -->
     <script src="../script.js"></script>
 </body>
 </html>

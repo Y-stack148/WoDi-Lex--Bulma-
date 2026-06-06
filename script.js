@@ -115,35 +115,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 5. EFECTO DE NAVEGACIÓN DESLIZANTE AUTOMÁTICO (CORREGIDO: Ahora dentro del DOMContentLoaded)
+    // 5. EFECTO DE NAVEGACIÓN DESLIZANTE AUTOMÁTICO (CON RECALCULO DE TAMAÑO)
     // ==========================================
     const menuStart = document.querySelector('.navbar-start');
     const indicador = document.querySelector('.nav-sliding-indicator');
     const linksMenu = document.querySelectorAll('.navbar-start .navbar-item');
 
-    if (menuStart && indicador && window.innerWidth >= 1024) {
-        
+    if (menuStart && indicador) {
         const moverCapsula = (elemento) => {
-            indicador.style.left = `${elemento.offsetLeft}px`;
-            indicador.style.width = `${elemento.offsetWidth}px`;
-            indicador.style.opacity = '1';
+            if (window.innerWidth >= 1024) {
+                indicador.style.left = `${elemento.offsetLeft}px`;
+                indicador.style.width = `${elemento.offsetWidth}px`;
+                indicador.style.opacity = '1';
+            }
         };
 
-        const linkActivo = document.querySelector('.navbar-start .navbar-item.is-active');
-        if (linkActivo) {
-            moverCapsula(linkActivo);
-        }
+        const actualizarPosicionActual = () => {
+            const linkActivo = document.querySelector('.navbar-start .navbar-item.is-active');
+            if (linkActivo && window.innerWidth >= 1024) {
+                moverCapsula(linkActivo);
+            } else {
+                indicador.style.opacity = '0'; // Ocultar si pasa a formato móvil
+            }
+        };
+
+        // Inicializar posición
+        actualizarPosicionActual();
 
         linksMenu.forEach(link => {
             link.addEventListener('mouseenter', () => moverCapsula(link));
         });
 
         menuStart.addEventListener('mouseleave', () => {
-            if (linkActivo) {
-                moverCapsula(linkActivo);
-            } else {
-                indicador.style.opacity = '0';
-            }
+            actualizarPosicionActual();
+        });
+
+        // OPTIMIZACIÓN RESPONSIVA: Recalcula la posición si la pantalla cambia de tamaño o se gira el dispositivo
+        window.addEventListener('resize', () => {
+            actualizarPosicionActual();
         });
     }
 
@@ -176,10 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Escucha en tiempo real cada letra presionada
         buscadorInput.addEventListener('input', filtrarProductos);
 
-        // Soporte por si presionan clic en la lupa
         if (buscadorBtn) {
             buscadorBtn.addEventListener('click', (e) => {
                 e.preventDefault();

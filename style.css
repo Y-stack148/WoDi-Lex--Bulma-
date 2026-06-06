@@ -342,3 +342,57 @@ footer {
     box-shadow: 0 0 15px rgba(0, 209, 178, 0.5) !important;
     transform: translateY(-2px);
 }
+
+/* ==========================================
+   NUEVO: AJUSTES RESPONSIVOS PARA PANTALLAS MÓVILES
+   ========================================== */
+@media screen and (max-width: 1023px) {
+    /* Forzar que el menú desplegable en celulares tenga el mismo fondo premium */
+    .navbar-menu {
+        background-color: rgba(13, 14, 18, 0.98) !important; /* Oscuro cyber */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5) !important;
+        padding: 1.25rem !important;
+        border-bottom: 2px solid #00d1b2 !important; /* Línea neón inferior al desplegar */
+    }
+
+    /* Modificación de enlaces desplegados para mejorar legibilidad táctil */
+    .navbar-menu .navbar-item {
+        padding: 0.75rem 1rem !important;
+        border-radius: 6px;
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+    
+    .navbar-menu .navbar-item:hover {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        color: #00d1b2 !important;
+    }
+
+    /* Alinear los elementos del buscador y botones de acción verticalmente */
+    .navbar-end {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.85rem !important;
+        align-items: stretch !important;
+        padding-top: 0.75rem !important;
+    }
+
+    /* Bloqueo del ancho del buscador elástico para que no rompa los márgenes móviles */
+    .custom-search-field {
+        width: 100% !important;
+    }
+    .custom-search-input {
+        width: 100% !important; 
+    }
+    .custom-search-input:focus {
+        width: 100% !important;
+        box-shadow: 0 0 12px rgba(0, 209, 178, 0.4) !important;
+    }
+
+    /* Suavizado de transformaciones 3D para evitar tirones durante el scroll con el dedo */
+    .product-3d-card:hover {
+        transform: translateY(-5px) !important; 
+    }
+    .product-3d-card:hover .product-img {
+        transform: translateY(-15px) scale(1.1) !important;
+    }
+}
