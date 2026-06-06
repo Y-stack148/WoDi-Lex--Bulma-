@@ -3,88 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | WoDi Lex</title>
+    <title>Gadgets | WoDi Lex</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Vinculación correcta con tu hoja de estilos en la raíz -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav class="navbar is-dark">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="../index.html"><strong>WoDi Lex</strong></a>
-            </div>
-            <div class="navbar-menu is-active">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="../index.html">Inicio</a>
-                    <a class="navbar-item" href="smartphones.html">Smartphones</a>
-                    <a class="navbar-item" href="laptops.html">Laptops</a>
-                    <a class="navbar-item" href="gadgets.html">Gadgets</a>
+    <!-- ENCABEZADO Y NAVEGACIÓN PREMIUM UNIFICADA -->
+    <header>
+        <nav class="navbar is-dark is-fixed-top" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../index.html">
+                        <strong class="is-size-4">WoDi Lex</strong>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarMain" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../index.html">Inicio</a>
+                        <a class="navbar-item" href="smartphones.html">Smartphones</a>
+                        <a class="navbar-item" href="laptops.html">Laptops</a>
+                        <!-- CORREGIDO: Ahora 'Gadgets' es la pestaña activa con el efecto elástico -->
+                        <a class="navbar-item is-active" href="gadgets.html">Gadgets</a>
+                        <span class="nav-sliding-indicator"></span>
+                    </div>
+
+                    <div class="navbar-end">
+                        <!-- Buscador -->
+                        <div class="navbar-item">
+                            <div class="field has-addons">
+                                <div class="control">
+                                    <input class="input is-small is-rounded" type="text" placeholder="Buscar...">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-small is-link is-rounded">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Acceso al Login -->
+                        <div class="navbar-item">
+                            <a href="login.html" class="button is-dark is-outlined is-inverted is-rounded">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                <span>Ingresar</span>
+                            </a>
+                        </div>
+
+                        <!-- Botón del Carrito Conectado -->
+                        <div class="navbar-item">
+                            <a href="carrito.html" class="button is-link is-inverted is-outlined is-rounded">
+                                <span class="icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="section">
+    <!-- CONTENIDO DE PRODUCTOS (GADGETS) -->
+    <main class="section" style="margin-top: 3rem;">
         <div class="container">
-            <h1 class="title is-2">Nuestros Productos</h1>
+            <h1 class="title is-2 has-text-centered mb-6">Nuestros Gadgets</h1>
             <div class="columns is-multiline">
                 
+                <!-- PRODUCTO 1: JBL CHARGE 6 -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/JBL Charge 6.jpg" alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=600" alt="JBL Charge 6" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">JBL Charge 6</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$3,199</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- PRODUCTO 2: MOUSE MERCURY -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Mouse mercury.jpg" alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=600" alt="Mouse Mercury" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Mouse Mercury Wireless</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$1,499</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- PRODUCTO 3: HUBS MULTIPUERTO -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Hubs.jpg" alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?q=80&w=600" alt="USB-C Hub" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Hub Multiport USB-C</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$899</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- PRODUCTO 4: TECLADO EPOMAKER -->
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Teclado Epomaker_.jpg" alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=600" alt="Teclado Epomaker" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Teclado Epomaker Pro</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$1,999</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -93,8 +140,14 @@
         </div>
     </main>
 
-    <footer class="footer has-text-centered">
-        <p>WoDi Lex - Calidad Garantizada</p>
+    <!-- PIE DE PÁGINA PREMIUM UNIFICADO -->
+    <footer class="footer has-background-black has-text-grey-light mt-6">
+        <div class="container content has-text-centered">
+            <p>&copy; 2026 <strong>WoDi Lex</strong>. Todos los derechos reservados. Gadgets y accesorios de máxima fidelidad.</p>
+        </div>
     </footer>
+
+    <!-- LLAMADA AL SCRIPT GLOBAL -->
+    <script src="../script.js"></script>
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectarse | WoDi Lex</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="has-background-light" style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <header>
+        <nav class="navbar is-dark" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../index.html">
+                        <strong class="is-size-4">WoDi Lex</strong>
+                    </a>
+                </div>
+                <div class="navbar-menu is-active">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../index.html">Inicio</a>
+                        <a class="navbar-item" href="smartphones.html">Smartphones</a>
+                        <a class="navbar-item" href="laptops.html">Laptops</a>
+                        <a class="navbar-item" href="pages/gadgets.html">Gadgets</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section is-flex-grow-1 is-flex is-align-items-center is-justify-content-center">
+        <div class="flip-container">
+            <div id="card">
+                
+                <div class="card-front">
+                    <div class="box p-6 has-text-centered">
+                        <h3 class="title is-4 mb-2">Welcome Back</h3>
+                        <p class="subtitle is-6 has-text-grey mb-5">Enter your details to continue</p>
+                        
+                        <div class="field has-text-left">
+                            <label class="label">Email Address</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="example@mail.com">
+                            </div>
+                        </div>
+
+                        <div class="field has-text-left">
+                            <label class="label">Password</label>
+                            <div class="control">
+                                <input class="input" type="password" placeholder="••••••••">
+                            </div>
+                        </div>
+
+                        <button class="button is-black is-fullwidth is-rounded mt-5 mb-4">Sign In</button>
+                        
+                        <p class="is-size-7 has-text-grey">
+                            Don't have an account? <a href="#" class="has-text-link has-text-weight-bold" onclick="flip(event)">Join now</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-back">
+                    <div class="box p-6 has-text-centered">
+                        <h3 class="title is-4 mb-2">Create Account</h3>
+                        <p class="subtitle is-6 has-text-grey mb-5">Join WoDi Lex platform today</p>
+                        
+                        <div class="field has-text-left">
+                            <label class="label">Full Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Alejandro Gutiérrez">
+                            </div>
+                        </div>
+
+                        <div class="field has-text-left">
+                            <label class="label">Correo electronico</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="example@mail.com">
+                            </div>
+                        </div>
+
+                        <div class="field has-text-left">
+                            <label class="label">Contraseña</label>
+                            <div class="control">
+                                <input class="input" type="password" placeholder="••••••••">
+                            </div>
+                        </div>
+
+                        <button class="button is-link is-fullwidth is-rounded mt-5 mb-4">Register</button>
+                        
+                        <p class="is-size-7 has-text-grey">
+                            Ya tienes un cuenta? <a href="#" class="has-text-link has-text-weight-bold" onclick="flip(event)">Iniciar sesion</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer has-background-black has-text-centered has-text-white py-4">
+        <p>&copy; 2026 WoDi Lex. Experiencia de usuario avanzada.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

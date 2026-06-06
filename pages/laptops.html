@@ -3,88 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | WoDi Lex</title>
+    <title>Laptops | WoDi Lex</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <nav class="navbar is-dark">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="../index.html"><strong>WoDi Lex</strong></a>
-            </div>
-            <div class="navbar-menu is-active">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="../index.html">Inicio</a>
-                    <a class="navbar-item" href="smartphones.html">Smartphones</a>
-                    <a class="navbar-item" href="laptops.html">Laptops</a>
-                    <a class="navbar-item" href="gadgets.html">Gadgets</a>
+    <header>
+        <nav class="navbar is-dark is-fixed-top" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../index.html">
+                        <strong class="is-size-4">WoDi Lex</strong>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarMain" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../index.html">Inicio</a>
+                        <a class="navbar-item" href="smartphones.html">Smartphones</a>
+                        <a class="navbar-item is-active" href="laptops.html">Laptops</a>
+                        <a class="navbar-item" href="gadgets.html">Gadgets</a>
+                        <span class="nav-sliding-indicator"></span>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field has-addons">
+                                <div class="control">
+                                    <input class="input is-small is-rounded" type="text" placeholder="Buscar...">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-small is-link is-rounded">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="navbar-item">
+                            <a href="login.html" class="button is-dark is-outlined is-inverted is-rounded">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                <span>Ingresar</span>
+                            </a>
+                        </div>
+
+                        <div class="navbar-item">
+                            <a href="carrito.html" class="button is-link is-inverted is-outlined is-rounded">
+                                <span class="icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="section">
+    <main class="section" style="margin-top: 3rem;">
         <div class="container">
-            <h1 class="title is-2">Nuestros Productos</h1>
+            <h1 class="title is-2 has-text-centered mb-6">Nuestras Laptops</h1>
             <div class="columns is-multiline">
                 
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Macbook Air.jpg" alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=600" alt="Macbook Air M5" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Dell XPS 16.jpg" alt="Producto">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Macbook Air M5</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$22,999</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Lenovo Yoga Slim 7x.jpg " alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=600" alt="Dell XPS 16" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Dell XPS 16 Premium</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$34,599</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 <div class="column is-12-mobile is-6-tablet is-3-desktop">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="../assets/Asus Zenbook S16.jpg" alt="Producto">
-                            </figure>
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=600" alt="Lenovo Yoga Slim 7x" class="product-img">
                         </div>
-                        <div class="card-content">
-                            <p class="title is-5">Nombre del Producto</p>
-                            <p class="subtitle is-6 has-text-link">$999</p>
-                            <button class="button is-primary is-fullwidth">Comprar</button>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Lenovo Yoga Slim 7x</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$24,199</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                    <div class="card product-3d-card">
+                        <div class="wrapper">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=600" alt="Asus Zenbook S16" class="product-img">
+                        </div>
+                        <div class="card-content has-text-centered product-info">
+                            <p class="title is-5">Asus Zenbook S16 OLED</p>
+                            <p class="subtitle is-6 has-text-link mb-4">$28,499</p>
+                            <button class="button is-link is-fullwidth is-soft">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -93,8 +129,12 @@
         </div>
     </main>
 
-    <footer class="footer has-text-centered">
-        <p>WoDi Lex - Calidad Garantizada</p>
+    <footer class="footer has-background-black has-text-grey-light mt-6">
+        <div class="container content has-text-centered">
+            <p>&copy; 2026 <strong>WoDi Lex</strong>. Todos los derechos reservados. Cómputo de alto rendimiento y vanguardia.</p>
+        </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

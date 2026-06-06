@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | WoDi Lex</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-dark" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../index.html"><strong>WoDi Lex</strong></a>
+                </div>
+                <div class="navbar-menu is-active">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../index.html">Inicio</a>
+                        <a class="navbar-item" href="smartphones.html">Smartphones</a>
+                        <a class="navbar-item" href="laptops.html">Laptops</a>
+                        <a class="navbar-item" href="gadgets.html">Gadgets</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1 class="title is-2"><i class="fas fa-shopping-cart"></i> Tu Pedido</h1>
+            <hr>
+            <div class="columns">
+                <div class="column is-8">
+                    <table class="table is-fullwidth is-striped">
+                        <thead>
+                            <tr>
+                                <th>Concepto</th>
+                                <th class="has-text-centered">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Artículos tecnológicos de vanguardia</td>
+                                <td class="has-text-centered is-size-5 has-text-weight-bold" id="cart-table-qty">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="btn-clear-cart" class="button is-danger is-light is-small">Vaciar Carrito</button>
+                </div>
+                <div class="column is-4">
+                    <div class="box">
+                        <h3 class="title is-5">Resumen</h3>
+                        <p class="mb-4">Envío estándar nacional: <strong class="has-text-success">Gratis</strong></p>
+                        <button class="button is-primary is-fullwidth is-rounded" onclick="alert('¡Compra simulada con éxito!')">Proceder al Pago</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer has-background-black has-text-centered has-text-white">
+        <p>&copy; 2026 WoDi Lex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
