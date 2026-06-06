@@ -1,4 +1,6 @@
-
+/* ==========================================
+   ESTILOS BASE Y COMPONENTES
+   ========================================== */
 .card-image img {
     height: 200px;
     object-fit: contain; 
@@ -46,22 +48,19 @@ footer {
 .glass-button:hover {
     background: rgba(255, 255, 255, 0.2) !important;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    transform: scale(1.05); /* Mantiene tu estilo original de crecimiento */
+    transform: scale(1.05);
 } 
 
 /* ==========================================
-   EFECTO DE GIRO 3D 
+   EFECTO DE GIRO 3D (LOGIN / REGISTRO)
    ========================================== */
-
-/* Contenedor que define el espacio 3D */
 .flip-container {
     perspective: 1000px;
     width: 100%;
     max-width: 380px;
-    height: 460px; /* Altura ideal para los campos de Bulma */
+    height: 460px;
 }
 
-/* El elemento interno que rotará */
 #card {
     width: 100%;
     height: 100%;
@@ -70,12 +69,10 @@ footer {
     position: relative;
 }
 
-/* Clase que inyectará JavaScript para voltear la tarjeta */
 #card.flipped {
     transform: rotateY(180deg);
 }
 
-/* Ambas caras de la tarjeta ocupan el mismo espacio */
 .card-front, .card-back {
     position: absolute;
     width: 100%;
@@ -84,84 +81,119 @@ footer {
     -webkit-backface-visibility: hidden;
 }
 
-/* La cara trasera empieza volteada por defecto */
 .card-back {
     transform: rotateY(180deg);
 }
 
-/* Forzar que los boxes internos llenen toda la tarjeta */
 .card-front .box, .card-back .box {
     height: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
 }
+
+/* ==========================================
+   DISEÑO ULTRA-PREMIUM PARA LA BARRA DE NAVEGACIÓN
+   ========================================== */
+.navbar.is-dark {
+    background-color: rgba(13, 14, 18, 0.85) !important; /* Cristal translúcido oscuro */
+    backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important;
+    
+    /* Borde inferior con degradado líquido neón de la marca */
+    border-bottom: 2px solid transparent !important;
+    border-image: linear-gradient(90deg, #485fc7, #00d1b2, #b570f6) 1;
+    
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.4s ease !important;
+}
+
+/* Identidad visual del logotipo WoDi Lex */
+.navbar-brand .navbar-item strong {
+    background: linear-gradient(135deg, #ffffff 40%, #00d1b2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    filter: drop-shadow(0 0 10px rgba(0, 209, 178, 0.4));
+    transition: all 0.3s ease;
+}
+
+.navbar-brand .navbar-item:hover strong {
+    background: linear-gradient(135deg, #ffffff 20%, #b570f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(181, 112, 246, 0.6));
+}
+
+.navbar-item {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: 500;
+}
+
+.navbar-item.is-active {
+    background-color: transparent !important;
+    color: #00d1b2 !important; /* Resalta la pestaña activa en verde aqua */
+    font-weight: 600;
+}
+
 /* ==========================================
    EFECTO DE CÁPSULA DESLIZANTE DE MENÚ (DESKTOP)
    ========================================== */
 @media screen and (min-width: 1024px) {
-    /* Hacemos relativo el contenedor para que la cápsula se mueva dentro */
     .navbar-start {
         position: relative;
         display: flex;
         align-items: center;
     }
 
-    /* Traemos los textos al frente para que queden sobre el brillo */
     .navbar-item {
         position: relative;
         z-index: 2;
         transition: color 0.3s ease;
     }
 
-    /* Quitamos el fondo gris por defecto de Bulma en hover */
     .navbar-item:hover {
         background-color: transparent !important;
         color: #fff !important;
     }
 
-    /* La cápsula interactiva (Glow Pill) */
     .nav-sliding-indicator {
         position: absolute;
-        height: 70%; /* Ocupa el alto estético del texto */
+        height: 70%;
         top: 15%;
         left: 0;
         width: 0;
-        /* Mezcla de los colores institucionales de WoDi Lex */
         background: linear-gradient(135deg, #485fc7, #00d1b2); 
         border-radius: 8px;
         z-index: 1;
-        /* cubic-bezier da el efecto elástico del video */
         transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         opacity: 0;
-        pointer-events: none; /* Evita parpadeos y bloqueos de clics */
+        pointer-events: none;
     }
 }
 
-/* Ocultar en móviles para evitar que rompa la estructura vertical */
 @media screen and (max-width: 1023px) {
     .nav-sliding-indicator {
         display: none;
     }
 }
-/* ==========================================
-   EFECTO DE TARJETA 3D CINEMÁTICA (FROM IMAGE_3)
-   ========================================== */
 
-/* Contenedor principal de la tarjeta */
-.product-3d-card {
+/* ==========================================
+   EFECTO DE TARJETA 3D CINEMÁTICA
+   ========================================== */
+.product-33d-card, .product-3d-card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    perspective: 2500px; /* Profundidad 3D idéntica al tutorial */
+    perspective: 2500px;
     border-radius: 12px;
-    background-color: #1f1f23 !important; /* Fondo oscuro premium para resaltar el producto */
-    overflow: visible !important; /* Permite que el producto sobresalga */
+    background-color: #1f1f23 !important;
+    overflow: visible !important;
     transition: all 0.5s ease;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* El contenedor de la imagen que gestiona el espacio */
 .product-3d-card .wrapper {
     position: relative;
     width: 100%;
@@ -173,7 +205,6 @@ footer {
     transition: transform 0.5s ease;
 }
 
-/* Pseudo-elementos del video para crear el resplandor ambiental (Glow Effect) */
 .product-3d-card .wrapper::before,
 .product-3d-card .wrapper::after {
     content: "";
@@ -188,12 +219,10 @@ footer {
     pointer-events: none;
 }
 
-/* Degradado de luz detrás del producto al hacer hover */
 .product-3d-card .wrapper::before {
     background: linear-gradient(to top, rgba(72, 95, 199, 0.4), transparent);
 }
 
-/* La imagen del dispositivo tecnológico */
 .product-3d-card .product-img {
     max-height: 90%;
     object-fit: contain;
@@ -201,7 +230,6 @@ footer {
     z-index: 3;
 }
 
-/* Bloque de textos y botón de Bulma */
 .product-3d-card .product-info {
     background-color: #ffffff;
     border-bottom-left-radius: 12px;
@@ -214,24 +242,103 @@ footer {
     color: #1f1f23 !important;
 }
 
-/* ==========================================
-   ESTADOS HOVER (CUANDO EL CURSOR SE POSA)
-   ========================================== */
-
-/* Inclinación sutil y elevación de la tarjeta */
+/* ESTADOS HOVER PRODUCTOS */
 .product-3d-card:hover {
     transform: translateY(-10px) rotateX(10deg);
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
 }
 
-/* Activación de los brillos ambientales */
 .product-3d-card:hover .wrapper::before,
 .product-3d-card:hover .wrapper::after {
     opacity: 1;
 }
 
-/* El truco maestro: El producto se hace grande y se sale de la tarjeta */
 .product-3d-card:hover .product-img {
     transform: translateY(-35px) scale(1.2) rotate(-5deg);
-    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.6)); /* Sombra flotante al producto */
+    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.6));
+}
+
+/* ==========================================
+   ANIMACIÓN Y GLOW DEL BUSCADOR PREMIUM 
+   ========================================== */
+.custom-search-field {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.custom-search-input {
+    width: 130px; /* Tamaño compacto inicial */
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Integración oscura con el menú cristal */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+}
+
+.custom-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Apertura elástica e iluminación intensa al enfocar */
+.custom-search-input:focus {
+    width: 200px; 
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: #00d1b2 !important; 
+    box-shadow: 0 0 15px rgba(0, 209, 178, 0.5) !important; 
+}
+
+.custom-search-btn {
+    background: #485fc7 !important; 
+    border: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.custom-search-btn:hover {
+    background: linear-gradient(135deg, #485fc7, #00d1b2) !important; 
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(72, 95, 199, 0.5) !important;
+}
+
+.custom-search-btn:active {
+    transform: scale(0.95);
+}
+
+.custom-search-btn:hover .fa-search {
+    animation: microBounce 0.5s ease;
+}
+
+@keyframes microBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* ==========================================
+   BOTONES DE ACCIÓN ADICIONALES (NAVBAR END)
+   ========================================== */
+.navbar-end .button.is-dark.is-outlined {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: #ffffff !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-end .button.is-dark.is-outlined:hover {
+    background-color: #ffffff !important;
+    color: #0d0e12 !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-end .button.is-link.is-outlined {
+    border-color: #485fc7 !important;
+    background-color: rgba(72, 95, 199, 0.1) !important;
+    color: #ffffff !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-end .button.is-link.is-outlined:hover {
+    background: linear-gradient(135deg, #485fc7, #00d1b2) !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 15px rgba(0, 209, 178, 0.5) !important;
+    transform: translateY(-2px);
 }
